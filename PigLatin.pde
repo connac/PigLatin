@@ -50,8 +50,18 @@ public String pigLatin(String sWord)
 	{
 		if(sWord.length() > 3)
 			return sWord.substring(1, sWord.length()) + sWord.substring(0, 1) + "ay";
-		return sWord + "ay";
+		return sWord + "quay";
 	}
+		if(findFirstVowel(sWord) > 0)
+	
+	{
+		
+		if(findQU(sWord) == 0)
+			return sWord.substring(2, sWord.length()) + "ay";
+		return sWord.substring(findFirstVowel(sWord), sWord.length()) + sWord.substring(0, findFirstVowel(sWord)) + "ay";
+	}
+	else
+	{
 	
 		return "ERROR!";
 	}
